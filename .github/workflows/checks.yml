@@ -16,6 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2 #THIS ACTION IS USED TO CHECKOUT THE CODE FROM THE REPOSITORY
       - name: Test
-        run: docker-compose run --rm app sh -c "python manage.py test" #This is the command that runs unit test on our project
+        run: docker compose run --rm app sh -c "python manage.py test" #This is the command that runs unit test on our project
       - name: Lint
-        run: docker-compose run --rm app sh -c "flake8" #This is the command that runs linting on our project
+        run: docker compose run --rm app sh -c "flake8" #This is the command that runs linting on our project
